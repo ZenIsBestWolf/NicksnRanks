@@ -1,0 +1,52 @@
+name: NicksnRanks
+version: 1.0
+author: Zen Wolf
+main: me.zenisbestwolf.nicksnranks.Main
+description: Nicknames and ranks.
+default: op
+api-version: 1.15
+permissions:
+    nicksnranks.*:
+        description: "Allows access to /nickname and /rank on all players."
+        default: op
+        children:
+            nicksnranks.nickname.self: true
+            nicksnranks.nickname.others: true
+            nicksnranks.rank.self: true
+            nicksnranks.rank.others: true
+    nicksnranks.nickname.*:
+        description: "Allows players to use /nickname on all players."
+        default: op
+        children:
+            nicksnranks.nickname.self: true
+            nicksnranks.nickname.others: true
+    nicksnranks.nickname.self:
+        description: "Allows players to use /nickname on themselves."
+        default: true
+    nicksnranks.nickname.others:
+        description: "Allows players to use /nicknames on others."
+        default: op
+        children:
+            nicksnranks.nickname.self: true
+    nicksnranks.rank.*:
+        description: "Allows players to use /rank on all players."
+        default: op
+        children:
+            nicksnranks.rank.self: true
+            nicksnranks.rank.others: true
+    nicksnranks.rank.self:
+        description: "Allows players to use /rank on themselves."
+        default: true
+    nicksnranks.rank.others:
+        description: "Allows players ot use /rank on others."
+        default: op
+        children:
+            nicksnranks.rank.self: true
+commands:
+    nickname:
+        aliases: [nick]
+        description: Nicknames the specified player to the specified string, or disables the nickname if empty.
+        usage: "/<command> [target] [nickname]"
+    rank:
+        description: Ranks the specified player to the specified string, or disables the rank if empty.
+        usage: "/<command> [target] [nickname]"
