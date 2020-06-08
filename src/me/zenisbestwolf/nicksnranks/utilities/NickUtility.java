@@ -10,13 +10,11 @@ public class NickUtility {
 	public static void updateNickname(CommandSender s, Player p, String n) {
 		if (n.equalsIgnoreCase("")) {
 			p.setDisplayName(p.getName());
-			// TODO: Erase from the nickname database.
 			FileUtility.removeData("nicknames", p.getUniqueId().toString());
 			PlayerListUtility.update(p);
 			s.sendMessage("Nickname disabled for " + p.getName() + ".");
 		} else {
 			p.setDisplayName(ChatUtility.chat(n + "&r"));
-			// TODO: Check if user is in the nickname database, if so, update, otherwise create an entry.
 			FileUtility.writeData("nicknames", p.getUniqueId().toString(), n);
 			PlayerListUtility.update(p);
 			s.sendMessage(ChatUtility.chat("Nickname set to \"" + n + "&r\" for " + p.getName() + "."));

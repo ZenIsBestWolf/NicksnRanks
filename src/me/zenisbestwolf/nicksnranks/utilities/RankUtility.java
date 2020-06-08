@@ -9,12 +9,10 @@ public class RankUtility {
 	 */
 	public static void updateRank(CommandSender s, Player p, String n) {
 		if (n.equalsIgnoreCase("")) {
-			// TODO: Erase from the rank database.
 			FileUtility.removeData("ranks", p.getUniqueId().toString());
 			PlayerListUtility.update(p);
 			s.sendMessage("Rank erased for " + p.getName() + ".");
 		} else {
-			// TODO: Check if user is in the rank database, if so, update, otherwise create an entry.
 			FileUtility.writeData("ranks", p.getUniqueId().toString(), n);
 			PlayerListUtility.update(p);
 			s.sendMessage(ChatUtility.chat("Rank set to \"" + n + "&r\" for " + p.getName() + "."));

@@ -21,7 +21,7 @@ public class NickCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		boolean isSelf = PermissionUtility.isSelf(args, sender);
 		boolean isLong = false;
-		if (isSelf && (!(args.length == 0) && sender instanceof Player && (sender.getName().equalsIgnoreCase(Bukkit.getPlayer(args[0]).getName())))) isLong = true;
+		if (isSelf && (!(args.length == 0) && sender instanceof Player && ((Player) sender == Bukkit.getPlayer(args[0])))) isLong = true;
 		if (PermissionUtility.checkPermission("nickname", sender, isSelf)) {
 			Player target;
 			String nickname = "";
