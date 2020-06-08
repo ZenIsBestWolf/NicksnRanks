@@ -86,3 +86,8 @@ build/
 # Editor agnostic.
 *.iml
 
+# Below is copied from http://gary-rowe.com/agilestack/2012/10/12/a-gitignore-file-for-intellij-and-eclipse-with-maven/
+
+# Maven
+log/
+target/
