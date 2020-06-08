@@ -46,7 +46,7 @@
 						<groupId>org.hamcrest</groupId>
 						<artifactId>hamcrest-core</artifactId>
 					</exclusion>
-				<exclusions>
+				</exclusions>
 		</dependency>
     </dependencies>
 
