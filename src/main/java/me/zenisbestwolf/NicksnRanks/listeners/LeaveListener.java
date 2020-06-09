@@ -1,12 +1,12 @@
-package me.zenisbestwolf.nicksnranks.listeners;
+package me.zenisbestwolf.NicksnRanks.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import me.zenisbestwolf.nicksnranks.Main;
-import me.zenisbestwolf.nicksnranks.utilities.ChatUtility;
+import me.zenisbestwolf.NicksnRanks.Main;
+import me.zenisbestwolf.NicksnRanks.Utilities.ChatUtility;
 
 public class LeaveListener implements Listener {
 	private static Main plugin;

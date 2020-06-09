@@ -1,14 +1,13 @@
-package me.zenisbestwolf.nicksnranks.listeners;
-
-import org.bukkit.event.player.AsyncPlayerChatEvent;
-
-import me.zenisbestwolf.nicksnranks.Main;
-import me.zenisbestwolf.nicksnranks.utilities.ChatUtility;
-import me.zenisbestwolf.nicksnranks.utilities.RankUtility;
+package me.zenisbestwolf.NicksnRanks.Listeners;
 
 import org.bukkit.Bukkit;
-import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
+
+import me.zenisbestwolf.NicksnRanks.Main;
+import me.zenisbestwolf.NicksnRanks.Utilities.ChatUtility;
+import me.zenisbestwolf.NicksnRanks.Utilities.RankUtility;
 
 public class ChatListener implements Listener {
 	private static Main plugin;

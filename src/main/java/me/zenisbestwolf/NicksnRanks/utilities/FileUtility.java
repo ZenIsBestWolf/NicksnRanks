@@ -1,4 +1,4 @@
-package me.zenisbestwolf.nicksnranks.utilities;
+package me.zenisbestwolf.NicksnRanks.Utilities;
 
 import java.io.File;
 import java.io.FileReader;
@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import me.zenisbestwolf.nicksnranks.Main;
+import me.zenisbestwolf.NicksnRanks.Main;
 
 public class FileUtility {
 	private static Main plugin = Main.getPlugin(Main.class);

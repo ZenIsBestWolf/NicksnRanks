@@ -1,4 +1,4 @@
-package me.zenisbestwolf.nicksnranks.commands;
+package me.zenisbestwolf.NicksnRanks.Commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -6,9 +6,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.zenisbestwolf.nicksnranks.Main;
-import me.zenisbestwolf.nicksnranks.utilities.NickUtility;
-import me.zenisbestwolf.nicksnranks.utilities.PermissionUtility;
+import me.zenisbestwolf.NicksnRanks.Main;
+import me.zenisbestwolf.NicksnRanks.Utilities.NickUtility;
+import me.zenisbestwolf.NicksnRanks.Utilities.PermissionUtility;
 
 public class NickCommand implements CommandExecutor {
 	private static Main plugin;

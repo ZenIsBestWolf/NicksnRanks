@@ -1,4 +1,4 @@
-package me.zenisbestwolf.nicksnranks.listeners;
+package me.zenisbestwolf.NicksnRanks.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -6,10 +6,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import me.zenisbestwolf.nicksnranks.Main;
-import me.zenisbestwolf.nicksnranks.utilities.ChatUtility;
-import me.zenisbestwolf.nicksnranks.utilities.NickUtility;
-import me.zenisbestwolf.nicksnranks.utilities.PlayerListUtility;
+import me.zenisbestwolf.NicksnRanks.Main;
+import me.zenisbestwolf.NicksnRanks.Utilities.ChatUtility;
+import me.zenisbestwolf.NicksnRanks.Utilities.NickUtility;
+import me.zenisbestwolf.NicksnRanks.Utilities.PlayerListUtility;
 
 public class JoinListener implements Listener {
 	private static Main plugin;

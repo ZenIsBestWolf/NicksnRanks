@@ -1,4 +1,4 @@
-package me.zenisbestwolf.nicksnranks.utilities;
+package me.zenisbestwolf.NicksnRanks.Utilities;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
