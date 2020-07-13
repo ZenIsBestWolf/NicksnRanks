@@ -20,6 +20,6 @@ public class ChatListener implements Listener {
 	public void onChat(AsyncPlayerChatEvent e) {
 		String rank = RankUtility.getRank(e.getPlayer().getUniqueId().toString());
 		if (rank == null) e.setFormat(ChatUtility.chat("<%s> " + e.getMessage()));
-		else e.setFormat(ChatUtility.chat(rank + "&r %s " + e.getMessage()));
+		else e.setFormat(ChatUtility.chat(rank + "&r <%s> " + e.getMessage()));
 	}
 }
