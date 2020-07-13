@@ -1,7 +1,7 @@
 name: NicksnRanks
 version: 1.2
 author: Zen Wolf
-main: me.zenisbestwolf.nicksnranks.Main
+main: me.zenisbestwolf.NicksnRanks.Main
 description: Nicknames and ranks.
 default: op
 api-version: 1.15
