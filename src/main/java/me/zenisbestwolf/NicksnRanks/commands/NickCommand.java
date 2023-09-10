@@ -21,8 +21,7 @@ public class NickCommand implements CommandExecutor {
 			sender.sendMessage("You do not have permission to execute this command.");
 			return false;
 		}
-		boolean isLong = false;
-		if (isSelf && (!(args.length == 0) && sender instanceof Player && ((Player) sender == Bukkit.getPlayer(args[0])))) isLong = true;
+		boolean isLong = (isSelf && (!(args.length == 0) && sender instanceof Player && ((Player) sender == Bukkit.getPlayer(args[0]))));
 		Player target;
 		String nickname = "";
 		if (isSelf) target = (Player) sender;
@@ -36,12 +35,9 @@ public class NickCommand implements CommandExecutor {
 			return true;
 		}
 
-		int i = (isSelf && !isLong) ? 0 : 1;
-		
-		while (i < args.length) {
+		for (int i = (isSelf && !isLong) ? 0 : 1; i < args.length; i++) {
 			nickname+=args[i];
 			if (i != args.length-1) nickname+=" ";
-			i++;
 		}
 		NickUtility.updateNickname(sender, target, nickname);
 		return true;

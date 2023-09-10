@@ -14,9 +14,9 @@ public class ChatListener implements Listener {
 		Bukkit.getPluginManager().registerEvents(this, plugin);
 	}
 	@EventHandler
-	public void onChat(AsyncPlayerChatEvent e) {
-		String rank = RankUtility.getRank(e.getPlayer().getUniqueId().toString());
-		if (rank == null) e.setFormat(ChatUtility.chat("<%s> " + e.getMessage()));
-		else e.setFormat(ChatUtility.chat(rank + "&r <%s> " + e.getMessage()));
+	public void onChat(AsyncPlayerChatEvent event) {
+		String rank = RankUtility.getRank(event.getPlayer().getUniqueId().toString());
+		if (rank == null) event.setFormat(ChatUtility.chat("<%s> " + event.getMessage()));
+		else event.setFormat(ChatUtility.chat(rank + "&r <%s> " + event.getMessage()));
 	}
 }

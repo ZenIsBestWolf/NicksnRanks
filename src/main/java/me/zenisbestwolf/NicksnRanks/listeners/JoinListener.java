@@ -17,12 +17,12 @@ public class JoinListener implements Listener {
 	}
 	
 	@EventHandler
-	public void onJoin(PlayerJoinEvent e) {
-		Player p = e.getPlayer();
-		String u = p.getUniqueId().toString();
-		String n = NickUtility.getNickname(u);
-		if (!(n == null)) NickUtility.setNickname(e.getPlayer(), n);
-		PlayerListUtility.update(p);
-		e.setJoinMessage(ChatUtility.chat(p.getPlayerListName() + "&e joined the game"));
+	public void onJoin(PlayerJoinEvent event) {
+		Player player = event.getPlayer();
+		String uuid = player.getUniqueId().toString();
+		String nickname = NickUtility.getNickname(uuid);
+		if (!(nickname == null)) NickUtility.setNickname(event.getPlayer(), nickname);
+		PlayerListUtility.update(player);
+		event.setJoinMessage(ChatUtility.chat(player.getPlayerListName() + "&e joined the game"));
 	}
 }

@@ -14,7 +14,7 @@ public class LeaveListener implements Listener {
 	}
 	
 	@EventHandler
-	public void onLeave(PlayerQuitEvent e) {
-		e.setQuitMessage(ChatUtility.chat(e.getPlayer().getPlayerListName() + "&e left the game"));
+	public void onLeave(PlayerQuitEvent event) {
+		event.setQuitMessage(ChatUtility.chat(event.getPlayer().getPlayerListName() + "&e left the game"));
 	}
 }

@@ -35,13 +35,11 @@ public class RankCommand implements CommandExecutor {
 			return true;
 		}
 
-		int i = (isSelf && !isLong) ? 0 : 1;
-
-		while (i < args.length) {
+		for (int i = (isSelf && !isLong) ? 0 : 1; i < args.length; i++) {
 			rank+=args[i];
 			if (i != args.length-1) rank+=" ";
-			i++;
 		}
+		
 		RankUtility.updateRank(sender, target, rank);
 		return true;
 	}
