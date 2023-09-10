@@ -1,4 +1,4 @@
-package me.zenisbestwolf.NicksnRanks.Commands;
+package me.zenisbestwolf.NicksnRanks.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -7,14 +7,11 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.zenisbestwolf.NicksnRanks.Main;
-import me.zenisbestwolf.NicksnRanks.Utilities.PermissionUtility;
-import me.zenisbestwolf.NicksnRanks.Utilities.RankUtility;
+import me.zenisbestwolf.NicksnRanks.utilities.PermissionUtility;
+import me.zenisbestwolf.NicksnRanks.utilities.RankUtility;
 
 public class RankCommand implements CommandExecutor {
-	private static Main plugin;
-	
 	public RankCommand(Main plugin) {
-		this.plugin = plugin;
 		plugin.getCommand("rank").setExecutor(this);
 	}
 	

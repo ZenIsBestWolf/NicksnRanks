@@ -2,8 +2,8 @@ package me.zenisbestwolf.NicksnRanks;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.zenisbestwolf.NicksnRanks.Commands.*;
-import me.zenisbestwolf.NicksnRanks.Listeners.*;
+import me.zenisbestwolf.NicksnRanks.commands.*;
+import me.zenisbestwolf.NicksnRanks.listeners.*;
 
 public class Main extends JavaPlugin{
 	public void onEnable() {

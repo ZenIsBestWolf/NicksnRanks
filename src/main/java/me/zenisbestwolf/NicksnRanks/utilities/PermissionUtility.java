@@ -1,4 +1,4 @@
-package me.zenisbestwolf.NicksnRanks.Utilities;
+package me.zenisbestwolf.NicksnRanks.utilities;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;

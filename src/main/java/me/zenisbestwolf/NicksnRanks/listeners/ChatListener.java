@@ -1,4 +1,4 @@
-package me.zenisbestwolf.NicksnRanks.Listeners;
+package me.zenisbestwolf.NicksnRanks.listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
@@ -6,14 +6,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 import me.zenisbestwolf.NicksnRanks.Main;
-import me.zenisbestwolf.NicksnRanks.Utilities.ChatUtility;
-import me.zenisbestwolf.NicksnRanks.Utilities.RankUtility;
+import me.zenisbestwolf.NicksnRanks.utilities.ChatUtility;
+import me.zenisbestwolf.NicksnRanks.utilities.RankUtility;
 
 public class ChatListener implements Listener {
-	private static Main plugin;
-	
 	public ChatListener(Main plugin) {
-		this.plugin = plugin;
 		Bukkit.getPluginManager().registerEvents(this, plugin);
 	}
 	@EventHandler

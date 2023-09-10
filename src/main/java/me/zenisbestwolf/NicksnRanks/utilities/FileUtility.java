@@ -1,4 +1,4 @@
-package me.zenisbestwolf.NicksnRanks.Utilities;
+package me.zenisbestwolf.NicksnRanks.utilities;
 
 import java.io.File;
 import java.io.FileReader;
@@ -13,8 +13,8 @@ public class FileUtility {
 	private static Main plugin = Main.getPlugin(Main.class);
 	private static String dataPath = plugin.getDataFolder().getAbsolutePath();
 	public static void writeData(String fileName, String key, String value) {
-		JSONObject main = new JSONObject();
-		main.put(key, value);
+		JSONObject Main = new JSONObject();
+		Main.put(key, value);
 		try {
 			File file = new File(dataPath + File.separator + fileName + ".json");
 			File filePath = new File(dataPath);
@@ -22,14 +22,14 @@ public class FileUtility {
 			if (!file.exists()) {
 				file.createNewFile();
 				FileWriter fileWriter = new FileWriter(file);
-				fileWriter.write(main.toJSONString());
+				fileWriter.write(Main.toJSONString());
 				fileWriter.flush();
 				fileWriter.close();
 			} else {
 				JSONParser parser = new JSONParser();
 				Object obj = parser.parse(new FileReader(file));
 				JSONObject jsonObject = (JSONObject) obj;
-				jsonObject.putAll(main);
+				jsonObject.putAll(Main);
 				FileWriter fileWriter = new FileWriter(file);
 				fileWriter.write(jsonObject.toJSONString());
 				fileWriter.flush();
